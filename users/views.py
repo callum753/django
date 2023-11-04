@@ -14,7 +14,7 @@ def register(request):
             return redirect('itreporting:home')
     else:
         form = UserCreationForm()
-        return render(request, 'users/register.html', {'form': form , 'title': 'Student Registration'})
+        return render(request, 'users/register.html', {'form': form, 'title': 'Student Registration'})
 
 # Create your views here.
     
