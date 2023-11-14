@@ -1,0 +1,9 @@
+{% extends "itreporting/base.html" %}
+{% block content %}
+
+def report(request):
+    daily_report = {'issues': Issue.objects.all(), 'title': 'Issues Reported'}
+    return render(request, 'itreporting/report.html', daily_report)
+
+
+{% endblock content %}
