@@ -3,3 +3,17 @@
 
 <h1>Welcome to Student IT Services</h1>
 {% endblock content %}
+{% block sidebar %}
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Current weather</h3>
+            <p class='text-muted'>Cities across United kingdom
+                <ul class="list-group">
+                    {% for weather in weather_data %}
+                    <li class="list-group-item list-group-item-light">{{weather.city }}: {{ weather.description }}, {{ weather.temperature}}&deg;C</li>
+                    {% endfor %}
+                </ul>
+            </p>
+        </div>
+    </div>
+{% endblock sidebar %}

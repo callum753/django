@@ -5,8 +5,8 @@
             <img class="rounded-circle article-img" src="{{ issue.author.profile.image.url }}"/>
         <div class="media-body">
             <div class="article-metadata">
-                <a class="mr-2" href="#">{{ object.author.profile }}</a>
-                <small class="text-muted">{{ object.date_submitted}}</small>
+                <a class="mr-2" href="{% url 'itreporting:user-issues' object.author.username %}">{{ object.author }}</a>
+                <small class="text-muted">{{ object.date_submitted }}</small>
             </div>
             <h2 class="article-title">{{ object.type }} Issue in Room {{object.room}}</h2>
             <p class="article-content">{{ object.details }}</p>
@@ -16,5 +16,4 @@
             {% endif %}
         </div>
     </article>
-
-{% endblock content %}
+{% endblock content%}
